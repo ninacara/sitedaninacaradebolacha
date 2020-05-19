@@ -1,0 +1,239 @@
+/* soft reset do css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body  { 
+    background-image: url(https://www.publicdomainpictures.net/pictures/30000/velka/solid-lavender-background.jpg);
+    background-size: auto 100vh;
+    font-family: 'Amatic SC', cursive;
+    height: 100vh;
+    font-size: 10px;
+  }
+/* se a tela tiver pelo menos 400px, vão carregar estes estilos*/
+@media (min-width: 550px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  body {
+    font-size: 8px;
+  }
+}
+
+  header {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .menu{
+    background-color: lavender;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1;
+  }
+
+  .menu a{
+    display: block;
+    transition: 1s;
+    font-size: 2em;
+  }
+
+  .menu a:active,
+  .menu a:hover {
+    background-color: lightcoral;
+    color: lavender;
+  }
+
+  .menu li {
+    list-style: none;
+  }
+
+  .menu ul {
+    display: flex; 
+    justify-content: space-around; 
+  }
+  
+  a {
+    color: lightcoral;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .título {
+    transform: scale (0.2) translateY(50vh);
+    opacity: 0;
+
+    animation: linear 2s animaçaoTítulo forwards;
+  }
+
+
+  @keyframes animaçaoTítulo {
+    0%{
+
+    }
+    100%{
+      transform: scale (3) translateY(0);
+      opacity: 1;
+    }
+
+  }
+  
+  .site-subtitle,
+  .site-title {
+    color: saddlebrown;
+    text-align: center;
+  }
+  
+  .site-title{
+    font-family: 'Pacifico', cursive;
+    font-size: 5em;
+  }
+  
+  .site-subtitle {
+    font-family: 'Amatic SC', cursive;
+    font-size: 3em;
+    line-height: 2em;
+  }
+
+  .sobre,
+  .contato,
+  .portifolio {
+    padding: 2em;
+    min-height: 100vh;
+    }
+
+    @media (min-width: 1200px) {
+      .container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1200px;
+      }
+    }
+
+  .sobre h2,
+  .contato h2,
+  .portifolio h2 {
+    color: saddlebrown;
+    font-family: 'Amatic SC', cursive;
+    margin-bottom: 1em;
+    font-size: 3em;
+  }
+
+  .sobre .avatar {
+    float: right;
+    margin-left: 1.4em;
+  }
+
+  .sobre .avatar img {
+   border-radius: 50%;
+  }
+
+  .sobre p {
+    color: saddlebrown;
+    font-size: 2em;
+    margin-bottom: 1.4em;
+    text-align: justify;
+    text-indent: 1.4em;
+  }
+
+  .portifolio .grid {
+    display: grid;
+    gap: 1em;
+  }
+
+@media (min-width: 660px) {
+  .portifolio .grid {
+    grid-template-columns: 300px 300px;
+  }  
+}
+
+@media (min-width: 960px) {
+  .portifolio .grid {
+    grid-template-columns: repeat(3, 300px);
+    justify-content: center;
+    }  
+}
+  .portifolio figure {
+    text-align: center;
+  }
+
+  .img-portfolio {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 500ms;
+  }
+
+  .portifolio h3{
+    color: saddlebrown;
+    font-size: 2em;
+    text-align: center;
+  }
+
+ /* .img-portfolio:hover{
+    transform: scale(1.1);
+  }*/
+
+  .flip-card {
+    height: 300px;
+    perspective: 1000px;
+  }
+
+  .card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+  }
+
+  .flip-card:hover .card {
+    transform: rotateY(180deg);
+  }
+
+  .card-front, .card-back {
+    backface-visibility: hidden;
+    left:0;
+    position: absolute;
+    top: 0;
+  }
+
+  .card-back {
+    align-items: center;
+    background-color: lavender;
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    width: 100%;
+    transform: rotateY(180deg);
+  }
+
+  .contato a {
+    color: lightcoral;
+    font-size: 5em;
+    transition: 1s;
+  }
+ 
+  .contato a:active,
+  .contato a:hover {
+    text-decoration: none;
+    text-shadow: 0px 0px 10px rgba(70, 21, 21, 0.5);
+  }
+
+  .contato .icons {
+    text-align: center;
+  }
+  
+ 
+  
